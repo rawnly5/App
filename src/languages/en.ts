@@ -2821,6 +2821,9 @@ const translations = {
     },
     editAgentPromptPage: {
         title: 'Write custom instructions',
+        error: {
+            emptyPrompt: 'Please enter instructions for your agent.',
+        },
     },
     expenseRulesPage: {
         title: 'Expense rules',
