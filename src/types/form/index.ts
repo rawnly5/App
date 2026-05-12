@@ -122,6 +122,7 @@ export type {AddDomainMemberForm} from './AddDomainMemberForm';
 export type {DomainGroupEditNameForm} from './DomainGroupEditNameForm';
 export type {WorkspaceTimeTrackingDefaultRateForm} from './WorkspaceTimeTrackingDefaultRateForm';
 export type {EditExpensifyCardLimitTypeForm} from './EditExpensifyCardLimitTypeForm';
+export type {DomainGroupCreateForm} from './DomainGroupCreateForm';
 export type {AddWorkEmailForm} from './AddWorkEmailForm';
 export type {AddAgentForm} from './AddAgentForm';
 export type {EditAgentNameForm} from './EditAgentNameForm';

@@ -5309,6 +5309,7 @@ _Per istruzioni più dettagliate, [visita il nostro sito di assistenza](${CONST.
                     requiredColumns: (missingColumns: string) => `Assegna una colonna a ciascuno degli attributi: ${missingColumns}.`,
                     duplicateColumns: (duplicateColumn: string) => `Ops! Hai associato un singolo campo ("${duplicateColumn}") a più colonne. Controlla e riprova.`,
                 },
+                fileImportDescription: "Un'opzione manuale se la tua banca non può inviare un feed.",
             },
             statementCloseDate: {
                 [CONST.COMPANY_CARDS.STATEMENT_CLOSE_DATE.LAST_DAY_OF_MONTH]: 'Ultimo giorno del mese',
@@ -6799,6 +6800,7 @@ Richiedi dettagli sulle spese come ricevute e descrizioni, imposta limiti e valo
                 gambling: 'Gioco d’azzardo',
                 tobacco: 'Tabacco',
                 adultEntertainment: 'Intrattenimento per adulti',
+                giftCard: 'Acquisto di carte regalo',
                 handwrittenReceipt: 'Ricevute scritte a mano',
                 requireCompanyCard: 'Richiedi le carte aziendali per tutti gli acquisti',
                 requireCompanyCardDescription: 'Contrassegna tutte le spese in contanti, inclusi chilometraggio e indennità giornaliere.',
@@ -8463,6 +8465,8 @@ Aggiungi altre regole di spesa per proteggere il flusso di cassa aziendale.`,
                         return `intrattenimento per adulti`;
                     case 'hotelIncidentals':
                         return `spese accessorie dell’hotel`;
+                    case 'giftCard':
+                        return `acquisto di carte regalo`;
                     case 'handwrittenReceipt':
                         return `ricevute scritte a mano`;
                     default:
@@ -9244,7 +9248,13 @@ Ecco una *ricevuta di prova* per mostrarti come funziona:`,
                 `Sei sicuro di voler impostare ${newName} come gruppo predefinito? I nuovi membri verranno invitati a questo gruppo invece del precedente gruppo predefinito (${currentName}). `,
             makeDefault: 'Imposta come predefinito',
             neverMind: 'Lascia perdere',
+            createGroupError: 'Impossibile creare questo gruppo. Riprova.',
             permissions: 'Autorizzazioni del gruppo',
+            createNewGroupButton: 'Nuovo gruppo',
+            createGroupSubmitButton: 'Crea gruppo',
+            expensifyCardPreferredWorkspace: 'Area di lavoro preferita per Expensify Card',
+            expensifyCardPreferredWorkspaceDescription:
+                "Tutte le transazioni Expensify Card verranno create nell'area di lavoro preferita Expensify Card anziché nell'area di lavoro preferita.",
             strictlyEnforceWorkspaceRules: 'Applica rigorosamente le regole dello spazio di lavoro',
             strictlyEnforceWorkspaceRulesDescription: 'Tutte le regole dello spazio di lavoro devono essere soddisfatte prima di inviare un rapporto. Non sono consentite eccezioni manuali.',
             restrictExpenseWorkspaceCreation: 'Limita la creazione/rimozione dell’area di lavoro spese',
@@ -9262,9 +9272,6 @@ Ecco una *ricevuta di prova* per mostrarti come funziona:`,
             noWorkspacesMessage: 'Non ci sono spazi di lavoro su questo dominio. È necessario uno spazio di lavoro per abilitare questa restrizione.',
             restrictDefaultLoginSelection: 'Limita la selezione di accesso predefinita',
             restrictDefaultLoginSelectionDescription: 'Impedisce ai membri di modificare l’email di accesso al di fuori del dominio aziendale per eludere le restrizioni delle policy.',
-            expensifyCardPreferredWorkspace: 'Area di lavoro preferita per Expensify Card',
-            expensifyCardPreferredWorkspaceDescription:
-                'Tutte le transazioni Expensify Card verranno create nell’area di lavoro preferita per Expensify Card anziché nell’area di lavoro preferita. L’attivazione di questa funzione sostituirà l’impostazione dell’area di lavoro preferita solo per le transazioni Expensify Card.',
             expensifyCardPreferredWorkspaceDisabledMessage:
                 'Per utilizzare questa impostazione, l’area di lavoro preferita deve essere abilitata e la Expensify Card deve essere configurata per il dominio.',
             findGroup: 'Trova gruppo',

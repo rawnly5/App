@@ -5298,6 +5298,7 @@ _Voor meer gedetailleerde instructies, [bezoek onze help-site](${CONST.NETSUITE_
                     duplicateColumns: (duplicateColumn: string) =>
                         `Oeps! Je hebt één enkel veld (“${duplicateColumn}”) aan meerdere kolommen gekoppeld. Controleer dit en probeer het opnieuw.`,
                 },
+                fileImportDescription: 'Een handmatige optie als je bank geen feed kan versturen.',
             },
             statementCloseDate: {
                 [CONST.COMPANY_CARDS.STATEMENT_CLOSE_DATE.LAST_DAY_OF_MONTH]: 'Laatste dag van de maand',
@@ -6777,6 +6778,7 @@ Vereis onkostendetails zoals bonnen en beschrijvingen, stel limieten en standaar
                 gambling: 'Gokken',
                 tobacco: 'Tabak',
                 adultEntertainment: 'Volwassenenentertainment',
+                giftCard: 'Cadeaukaartaankopen',
                 handwrittenReceipt: 'Handgeschreven bonnen',
                 requireCompanyCard: 'Verplicht bedrijfskaarten voor alle aankopen',
                 requireCompanyCardDescription: 'Markeer alle contante uitgaven, inclusief kilometer- en dagvergoedingen.',
@@ -8433,6 +8435,8 @@ er bestedingsregels toe om de kasstroom van het bedrijf te beschermen.`,
                         return `entertainment voor volwassenen`;
                     case 'hotelIncidentals':
                         return `hotelincidentals`;
+                    case 'giftCard':
+                        return `cadeaukaartaankopen`;
                     case 'handwrittenReceipt':
                         return `handgeschreven bonnen`;
                     default:
@@ -9213,7 +9217,12 @@ Hier is een *proefbon* om je te laten zien hoe het werkt:`,
                 `Weet je zeker dat je ${newName} de standaardgroep wilt maken? Nieuwe leden worden uitgenodigd voor deze groep in plaats van de vorige standaardgroep (${currentName}). `,
             makeDefault: 'Standaard maken',
             neverMind: 'Laat maar',
+            createGroupError: 'Kan deze groep niet aanmaken. Probeer het opnieuw.',
             permissions: 'Groepsmachtigingen',
+            createNewGroupButton: 'Nieuwe groep',
+            createGroupSubmitButton: 'Groep aanmaken',
+            expensifyCardPreferredWorkspace: 'Expensify Card voorkeurswerkruimte',
+            expensifyCardPreferredWorkspaceDescription: 'Alle Expensify Card-transacties worden aangemaakt in de Expensify Card-voorkeurswerkruimte in plaats van de voorkeurswerkruimte.',
             strictlyEnforceWorkspaceRules: 'Werkruimteregels strikt afdwingen',
             strictlyEnforceWorkspaceRulesDescription:
                 'Aan alle werkruimteregels moet worden voldaan voordat een rapport kan worden ingediend. Handmatige uitzonderingen zijn niet toegestaan.',
@@ -9231,9 +9240,6 @@ Hier is een *proefbon* om je te laten zien hoe het werkt:`,
             noWorkspacesMessage: 'Er zijn geen werkruimtes op dit domein. Een werkruimte is vereist om deze beperking in te schakelen.',
             restrictDefaultLoginSelection: 'Standaard login-selectie beperken',
             restrictDefaultLoginSelectionDescription: 'Voorkomt dat leden hun login-e-mail wijzigen naar een adres buiten het bedrijfsdomein om beleidsbeperkingen te omzeilen.',
-            expensifyCardPreferredWorkspace: 'Voorkeurswerkruimte voor Expensify Card',
-            expensifyCardPreferredWorkspaceDescription:
-                'Alle Expensify Card-transacties worden aangemaakt in de voorkeurswerkruimte voor Expensify Card in plaats van de voorkeurswerkruimte. Door deze functie in te schakelen, wordt de instelling voor de voorkeurswerkruimte alleen voor Expensify Card-transacties overschreven.',
             expensifyCardPreferredWorkspaceDisabledMessage:
                 'Om deze instelling te gebruiken, moet de voorkeurswerkruimte zijn ingeschakeld en moet voor het domein een Expensify Card zijn ingesteld.',
             findGroup: 'Groep zoeken',

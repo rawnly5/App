@@ -1607,6 +1607,12 @@ type SettingsNavigatorParamList = {
         domainAccountID: number;
         groupID: string;
     };
+    [SCREENS.DOMAIN.GROUP_CREATE]: {
+        domainAccountID: number;
+    };
+    [SCREENS.DOMAIN.GROUP_CREATE_PREFERRED_WORKSPACE]: {
+        domainAccountID: number;
+    };
 } & ReimbursementAccountNavigatorParamList;
 
 type DomainCardNavigatorParamList = {

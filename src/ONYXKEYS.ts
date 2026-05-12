@@ -718,6 +718,9 @@ const ONYXKEYS = {
     /** The transaction IDs to be highlighted when opening the Expenses search route page */
     TRANSACTION_IDS_HIGHLIGHT_ON_SEARCH_ROUTE: 'transactionIdsHighlightOnSearchRoute',
 
+    /** The preferred policy ID to be used when creating a group */
+    DOMAIN_GROUP_CREATE_PREFERRED_POLICY_ID: 'domainGroupCreatePreferredPolicyID',
+
     /** Collection Keys */
     COLLECTION: {
         ATTACHMENT: 'attachment_',
@@ -1122,6 +1125,8 @@ const ONYXKEYS = {
         EDIT_AGENT_NAME_FORM_DRAFT: 'editAgentNameFormDraft',
         EDIT_AGENT_PROMPT_FORM: 'editAgentPromptForm',
         EDIT_AGENT_PROMPT_FORM_DRAFT: 'editAgentPromptFormDraft',
+        CREATE_DOMAIN_GROUP_FORM: 'createDomainGroupForm',
+        CREATE_DOMAIN_GROUP_FORM_DRAFT: 'createDomainGroupFormDraft',
     },
     DERIVED: {
         REPORT_ATTRIBUTES: 'reportAttributes',
@@ -1270,6 +1275,7 @@ type OnyxFormValuesMapping = {
     [ONYXKEYS.FORMS.ADD_AGENT_FORM]: FormTypes.AddAgentForm;
     [ONYXKEYS.FORMS.EDIT_AGENT_NAME_FORM]: FormTypes.EditAgentNameForm;
     [ONYXKEYS.FORMS.EDIT_AGENT_PROMPT_FORM]: FormTypes.EditAgentPromptForm;
+    [ONYXKEYS.FORMS.CREATE_DOMAIN_GROUP_FORM]: FormTypes.DomainGroupCreateForm;
 };
 
 type OnyxFormDraftValuesMapping = {
@@ -1589,6 +1595,7 @@ type OnyxValuesMapping = {
     [ONYXKEYS.HAS_DENIED_CONTACT_IMPORT_PROMPT]: boolean | undefined;
     [ONYXKEYS.PERSONAL_POLICY_ID]: string;
     [ONYXKEYS.TRANSACTION_IDS_HIGHLIGHT_ON_SEARCH_ROUTE]: Record<string, Record<string, boolean>>;
+    [ONYXKEYS.DOMAIN_GROUP_CREATE_PREFERRED_POLICY_ID]: string | undefined;
 };
 
 type OnyxDerivedValuesMapping = {

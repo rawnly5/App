@@ -3704,6 +3704,7 @@ const CONST = {
             GAMBLING: 'gambling',
             TOBACCO: 'tobacco',
             ADULT_ENTERTAINMENT: 'adultEntertainment',
+            GIFT_CARD: 'giftCard',
             HANDWRITTEN_RECEIPT: 'handwrittenReceipt',
         },
         RECEIPT_PARTNERS: {
@@ -3870,6 +3871,7 @@ const CONST = {
             gambling: true,
             tobacco: false,
             adultEntertainment: true,
+            giftCard: false,
             handwrittenReceipt: false,
         },
         DEFAULT_BILLABLE: false,
@@ -4188,6 +4190,7 @@ const CONST = {
         FEED_TYPE: {
             CUSTOM: 'customFeed',
             DIRECT: 'directFeed',
+            FILE_IMPORT: 'fileImport',
         },
         // Mostly used for get bank details
         BANKS: {
@@ -9660,6 +9663,11 @@ const CONST = {
         },
         SAFE_AREA: {
             DISMISS_KEYBOARD_LANDSCAPE_MODE: 'SafeArea-DismissKeyboardLandscapeMode',
+        },
+        DOMAIN: {
+            GROUPS: {
+                CREATE_GROUP_BUTTON: 'DomainGroups-CreateGroupButton',
+            },
         },
     },
 

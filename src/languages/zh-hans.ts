@@ -5169,6 +5169,7 @@ _如需更详细的说明，请[访问我们的帮助网站](${CONST.NETSUITE_IM
                     requiredColumns: (missingColumns: string) => `请为以下每个属性分配一列：${missingColumns}`,
                     duplicateColumns: (duplicateColumn: string) => `哎呀！你已将单个字段（“${duplicateColumn}”）映射到了多个列。请检查后重试。`,
                 },
+                fileImportDescription: '如果您的银行无法发送数据馈送时的手动选项。',
             },
             statementCloseDate: {
                 [CONST.COMPANY_CARDS.STATEMENT_CLOSE_DATE.LAST_DAY_OF_MONTH]: '月末最后一天',
@@ -6601,6 +6602,7 @@ ${reportName}
                 gambling: '赌博',
                 tobacco: '烟草',
                 adultEntertainment: '成人娱乐',
+                giftCard: '礼品卡购买',
                 handwrittenReceipt: '手写收据',
                 requireCompanyCard: '所有消费均需使用公司卡',
                 requireCompanyCardDescription: '标记所有现金支出，包括里程和每日津贴报销。',
@@ -8210,6 +8212,8 @@ ${reportName}
                         return `成人娱乐`;
                     case 'hotelIncidentals':
                         return `酒店杂费`;
+                    case 'giftCard':
+                        return `礼品卡购买`;
                     case 'handwrittenReceipt':
                         return `手写收据`;
                     default:
@@ -8969,7 +8973,12 @@ ${reportName}
             defaultGroupPrompt: (currentName: string, newName: string) => `您确定要将 ${newName} 设为默认群组吗？新成员将被邀请加入此群组，而不是之前的默认群组（${currentName}）。`,
             makeDefault: '设为默认',
             neverMind: '算了',
+            createGroupError: '无法创建此群组。请重试。',
             permissions: '群组权限',
+            createNewGroupButton: '新建群组',
+            createGroupSubmitButton: '创建群组',
+            expensifyCardPreferredWorkspace: 'Expensify Card 首选工作区',
+            expensifyCardPreferredWorkspaceDescription: '所有Expensify Card交易将在Expensify Card首选工作区而非首选工作区中创建。',
             strictlyEnforceWorkspaceRules: '严格执行工作空间规则',
             strictlyEnforceWorkspaceRulesDescription: '提交报告前必须满足所有工作空间规则。不允许手动例外。',
             restrictExpenseWorkspaceCreation: '限制创建/删除费用工作区',
@@ -8985,9 +8994,6 @@ ${reportName}
             noWorkspacesMessage: '此域上没有工作区。启用此限制需要一个工作区。',
             restrictDefaultLoginSelection: '限制默认登录选择',
             restrictDefaultLoginSelectionDescription: '防止成员将登录邮箱更改为公司域名以外的地址，以规避政策限制。',
-            expensifyCardPreferredWorkspace: 'Expensify Card 首选工作区',
-            expensifyCardPreferredWorkspaceDescription:
-                '所有 Expensify Card 交易将在 Expensify Card 首选工作区中创建，而不是在首选工作区中创建。启用此功能将仅覆盖 Expensify Card 交易的首选工作区设置。',
             expensifyCardPreferredWorkspaceDisabledMessage: '要使用此设置，必须启用首选工作区，并且域必须已设置 Expensify Card。',
             findGroup: '查找群组',
         },

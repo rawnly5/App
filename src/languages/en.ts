@@ -5254,6 +5254,7 @@ const translations = {
             addNewCard: {
                 other: 'Other',
                 fileImport: 'Import transactions from file',
+                fileImportDescription: "A manual option if your bank can't send a feed.",
                 createFileFeedHelpText: `<muted-text>Please follow this <a href="${CONST.COMPANY_CARDS_CREATE_FILE_FEED_HELP_URL}">help guide</a> to get your company card expenses imported!</muted-text>`,
                 companyCardLayoutName: 'Company card layout name',
                 cardLayoutNameRequired: 'The Company card layout name is required',
@@ -6865,6 +6866,7 @@ const translations = {
                 gambling: 'Gambling',
                 tobacco: 'Tobacco',
                 adultEntertainment: 'Adult entertainment',
+                giftCard: 'Gift card purchases',
                 handwrittenReceipt: 'Handwritten receipts',
                 requireCompanyCard: 'Require company cards for all purchases',
                 requireCompanyCardDescription: 'Flag all cash spend, including mileage and per-diem expenses.',
@@ -8480,6 +8482,8 @@ const translations = {
                         return `adult entertainment`;
                     case 'hotelIncidentals':
                         return `hotel incidentals`;
+                    case 'giftCard':
+                        return `gift card purchases`;
                     case 'handwrittenReceipt':
                         return `handwritten receipts`;
                     default:
@@ -9265,7 +9269,13 @@ const translations = {
                 `Are you sure you want to make ${newName} the default group? New members will be invited to this group instead of the previous default group (${currentName}). `,
             makeDefault: 'Make default',
             neverMind: 'Never mind',
+            createGroupError: 'Unable to create this group. Please try again.',
             permissions: 'Group permissions',
+            createNewGroupButton: 'New group',
+            createGroupSubmitButton: 'Create group',
+            expensifyCardPreferredWorkspace: 'Expensify Card Preferred Workspace',
+            expensifyCardPreferredWorkspaceDescription:
+                'All Expensify Card transactions will be created on the Expensify Card Preferred Workspace instead of the Preferred Workspace. Enabling this feature will override the Preferred Workspace setting for Expensify Card transactions only.',
             strictlyEnforceWorkspaceRules: 'Strictly enforce workspace rules',
             strictlyEnforceWorkspaceRulesDescription: 'All workspace rules must be met before submitting a report. No manual exceptions allowed.',
             restrictExpenseWorkspaceCreation: 'Restrict expense workspace creation/removal',
@@ -9282,9 +9292,6 @@ const translations = {
             noWorkspacesMessage: 'There are no workspaces on this domain. A workspace is required to enable this restriction.',
             restrictDefaultLoginSelection: 'Restrict default login selection',
             restrictDefaultLoginSelectionDescription: 'Prevent members from changing their login email away from their company domain to avoid policy restrictions.',
-            expensifyCardPreferredWorkspace: 'Expensify Card Preferred Workspace',
-            expensifyCardPreferredWorkspaceDescription:
-                'All Expensify Card transactions will be created on the Expensify Card Preferred Workspace instead of the Preferred Workspace. Enabling this feature will override the Preferred Workspace setting for Expensify Card transactions only.',
             expensifyCardPreferredWorkspaceDisabledMessage: 'To use this setting, Preferred Workspace must be enabled and the domain must have Expensify Card set up.',
             findGroup: 'Find group',
         },
